@@ -11,7 +11,11 @@ ERROR CASES:
 NOTES:
 */
 
-void swap(int *a, int *b)
+void swap(int *a,int *b)
 {
+	int t=*a ;
+	*a = *b;
+	*b = t;
+
 	
 }

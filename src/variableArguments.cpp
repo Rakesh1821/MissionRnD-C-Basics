@@ -11,11 +11,18 @@ E.g.: If first argument to function is 5, total number of arguments to function 
 OUTPUT: 	Returns the number of students who scored > 90 marks.
 
 ERROR CASES:
-
 NOTES: 		use stdarg.h header.
 */
 
 int variableArguments(int arg_count, ...)
 {
-	return 0;
+	va_list valist;
+	int count2=0,i;
+	va_start(valist, arg_count);
+	for (i = 0; i < arg_count; i++)
+	{
+		if (va_arg(valist, int) > 90)
+			count2++;
+	}
+	return count2;
 }
